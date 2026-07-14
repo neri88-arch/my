@@ -18,7 +18,7 @@ sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podma
 
 git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si --noconfirm && cd .. && rm -rf paru
 
-paru -S --needed --noconfirm obfs4proxy brave-bin zsh-theme-powerlevel10k-git qutebrowser sddm-conf noctalia-shell
+paru -S --needed --noconfirm obfs4proxy brave-bin zsh-theme-powerlevel10k-git qutebrowser sddm-conf noctalia-shell searxng-git
 
 sudo pacman -Rsn vim vim-runtime alacritty waybar
 
