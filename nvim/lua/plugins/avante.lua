@@ -13,12 +13,15 @@ return {
           __inherited_from = "openai",
           api_key_name = "",
           endpoint = "http://localhost:8080/v1",
-          model = "llama-3.2-3b-instruct",
+          model = "coder",
           timeout = 30000,
-          extra_request_body = {
-            temperature = 0.75,
-            max_tokens = 20480,
-          },
+        },
+      },
+      windows = {
+        ask = {
+          floating = true,
+          start_insert = true,
+          border = "rounded",
         },
       },
     },
