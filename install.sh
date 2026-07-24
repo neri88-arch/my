@@ -14,7 +14,7 @@ set -e
 
 sudo pacman -Syu --noconfirm
 
-sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podman tor zsh ttf-meslo-nerd git fastfetch sl devtools neovim cuda kitty qwen-code
+sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podman tor zsh ttf-meslo-nerd git fastfetch sl devtools neovim cuda kitty qwen-code copyq
 
 git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si --noconfirm && cd .. && rm -rf paru
 
