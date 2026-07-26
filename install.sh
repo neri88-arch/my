@@ -14,7 +14,7 @@ set -e
 
 sudo pacman -Syu --noconfirm
 
-sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podman tor zsh ttf-meslo-nerd git fastfetch sl devtools neovim cuda kitty qwen-code unzip polkit-kde-agent
+sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podman tor zsh ttf-meslo-nerd git fastfetch sl devtools neovim cuda kitty qwen-code unzip polkit-kde-agent qemu-desktop virt-viewer
 
 git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si --noconfirm && cd .. && rm -rf paru
 
@@ -47,7 +47,7 @@ printf 'net.ipv6.conf.all.disable_ipv6 = 1\nnet.ipv6.conf.default.disable_ipv6 =
 
 mkdir -p ~/.config/kitty && echo "background_opacity 0.8" >> ~/.config/kitty/kitty.conf
 
-sudo systemctl enable --now tor libvirtd
+sudo systemctl enable --now tor libvirtd iptables 
 
 sudo chattr +i /etc/resolv.conf
 
