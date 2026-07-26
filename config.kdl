@@ -139,7 +139,7 @@ layer-rule {
 
 binds {
     // ==== Lancio applicazioni tenendo premuto Caps (ISO_Level5_Shift) ====
-    ISO_Level5_Shift+Q { spawn "kitty"; }
+    ISO_Level5_Shift+Q { spawn "kitty" "--single-instance"; }
     ISO_Level5_Shift+B { spawn "brave"; }
     ISO_Level5_Shift+N { spawn "kitty" "--title" "neovim" "-e" "nvim"; }
     ISO_Level5_Shift+E { spawn "dolphin"; }
