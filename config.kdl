@@ -16,6 +16,9 @@ spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 // INPUT
 // ----------------------------------------------------------------------
 input {
+
+    focus-follows-mouse
+
     keyboard {
         xkb {
             // CapsLock diventa un modificatore ISO_Level5_Shift via XKB puro.
