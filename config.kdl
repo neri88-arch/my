@@ -1,11 +1,5 @@
 // ============================================================================
 // niri config.kdl
-//
-// CapsLock diventa un modificatore extra (ISO_Level5_Shift) per lanciare
-// applicazioni, gestito via XKB puro, senza keyd: tieni premuto Caps e premi
-// una lettera (es. Caps+Q = terminale). Vedi nota in fondo al file sul perché
-// non si può usare "Hyper" con una vera modalità stile Sway.
-// La navigazione tra le finestre resta sul tasto Super (Mod).
 // ============================================================================
 
 // Avvia noctalia-shell (bar/dock/launcher su Quickshell).
@@ -266,21 +260,3 @@ binds {
     Ctrl+Alt+Delete { quit; }
     Mod+Shift+P { power-off-monitors; }
 }
-
-// ============================================================================
-// NOTA sul motivo del riscrivimento della sezione Caps/Hyper
-//
-// Niri NON ha un sistema di "modalità" (mode) come Sway/i3: le azioni
-// "switch-to-mode" e i blocchi "mode { ... }" del file originale non esistono
-// nel parser di niri e causavano un errore di parsing (config non caricata).
-//
-// Inoltre niri accetta come modificatori nei bind SOLO questi nomi:
-// Ctrl, Shift, Alt, Super/Win, ISO_Level3_Shift/Mod5, ISO_Level5_Shift, Mod.
-// "Hyper" non è tra questi, quindi anche scrivendo "Hyper+Q" niente avrebbe
-// funzionato con l'opzione xkb "caps:hyper".
-//
-// La soluzione supportata nativamente da niri per usare Caps come modificatore
-// via solo XKB (senza keyd) è l'opzione xkb "lv5:caps_switch", che rende Caps
-// un vero ISO_Level5_Shift: per questo ora si lancia con Caps TENUTO PREMUTO
-// + lettera (es. Caps+Q), invece di "tocca Caps poi premi Q".
-// ============================================================================
