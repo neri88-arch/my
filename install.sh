@@ -15,7 +15,7 @@ set -e
 
 sudo pacman -Syu --noconfirm
 
-sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podman tor zsh ttf-meslo-nerd git cmake fastfetch sl devtools neovim cuda kitty unzip polkit-kde-agent qemu-desktop virt-viewer uv bat eza zoxide
+sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podman tor zsh ttf-meslo-nerd git cmake fastfetch sl devtools neovim cuda kitty unzip polkit-kde-agent qemu-desktop virt-viewer uv bat eza zoxide gwenview mpv
 
 git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si --noconfirm && cd .. && rm -rf paru
 
