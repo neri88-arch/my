@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# --- Sudo valido per tutta la durata dello script (niente più richieste ripetute, incluso chsh) ---
 sudo -v
 
 echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/99-temp-install >/dev/null
@@ -60,8 +59,10 @@ cd llama.cpp && cmake -B build -DGGML_CUDA=ON && cmake --build build --config Re
 
 cd ~
 
-cp -r /home/titania/nvim ~/.config/
-cp -r /home/titania/config.kdl ~/.config/niri/
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+cp -r "$SCRIPT_DIR/nvim" ~/.config/
+cp "$SCRIPT_DIR/config.kdl" ~/.config/niri/
 
 sudo ufw default deny incoming
 sudo ufw default allow outgoing 
