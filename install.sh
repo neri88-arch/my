@@ -62,6 +62,7 @@ cd llama.cpp && cmake -B build -DGGML_CUDA=ON && cmake --build build --config Re
 cd ~
 
 cp -r "$SCRIPT_DIR/nvim" ~/.config/
+cp -r "$SCRIPT_DIR/wallpaper" ~/Pictures/
 cp "$SCRIPT_DIR/config.kdl" ~/.config/niri/
 
 sudo ufw default deny incoming
