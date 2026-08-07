@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 sudo -v
 
 echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/99-temp-install >/dev/null
@@ -58,8 +60,6 @@ git clone https://github.com/ggerganov/llama.cpp
 cd llama.cpp && cmake -B build -DGGML_CUDA=ON && cmake --build build --config Release -j$(nproc)
 
 cd ~
-
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cp -r "$SCRIPT_DIR/nvim" ~/.config/
 cp "$SCRIPT_DIR/config.kdl" ~/.config/niri/
