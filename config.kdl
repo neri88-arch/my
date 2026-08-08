@@ -97,11 +97,6 @@ debug {
     honor-xdg-activation-with-invalid-serial
 }
 
-layer-rule {
-    match namespace="^noctalia-wallpaper*"
-    place-within-backdrop true
-}
-
 // ----------------------------------------------------------------------
 // TRASPARENZA + BLUR (richiede niri >= 26.04)
 // ----------------------------------------------------------------------
@@ -120,13 +115,6 @@ window-rule {
 window-rule {
     background-effect {
         blur true
-        xray false
-    }
-}
-
-layer-rule {
-    match namespace="^noctalia-(background|launcher-overlay|dock)-.*$"
-    background-effect {
         xray false
     }
 }
