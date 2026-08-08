@@ -50,7 +50,7 @@ printf 'net.ipv6.conf.all.disable_ipv6 = 1\nnet.ipv6.conf.default.disable_ipv6 =
 
 mkdir -p ~/.config/kitty && echo "background_opacity 0.8" >> ~/.config/kitty/kitty.conf
 
-sudo systemctl enable --now tor libvirtd iptables
+sudo systemctl enable --now tor libvirtd iptables ufw
 
 sudo chattr +i /etc/resolv.conf
 
@@ -70,6 +70,7 @@ cp "$SCRIPT_DIR/config.kdl" ~/.config/niri/
 
 sudo ufw default deny incoming
 sudo ufw default allow outgoing 
+sudo ufw eneble
 
 sudo chsh -s "$(which zsh)" "$USER"
 
