@@ -54,8 +54,7 @@ sudo systemctl enable --now tor libvirtd iptables
 
 sudo chattr +i /etc/resolv.conf
 
-mkdir Models
-mkdir Project
+mkdir Models && mkdir Project
 
 git clone https://github.com/snowarch/inir.git &&
 cd inir && ./setup install -y
