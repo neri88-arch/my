@@ -56,7 +56,7 @@ sudo chattr +i /etc/resolv.conf
 mkdir Models && mkdir Project
 
 git clone https://github.com/snowarch/inir.git &&
-cd inir && ./setup install -y
+cd inir && ./setup install -y && cd ~
 
 git clone https://github.com/ggerganov/llama.cpp
 cd llama.cpp && cmake -B build -DGGML_CUDA=ON && cmake --build build --config Release -j$(nproc)
