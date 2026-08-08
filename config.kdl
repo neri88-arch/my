@@ -3,7 +3,7 @@
 // ============================================================================
 
 // Avvia noctalia-shell (bar/dock/launcher su Quickshell).
-spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "qs" "-c" "inir"
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1" 
 
 // ----------------------------------------------------------------------
@@ -86,7 +86,7 @@ hotkey-overlay {
 }
 
 // ----------------------------------------------------------------------
-// INTEGRAZIONE NOCTALIA-SHELL
+// INTEGRAZIONE SHELL
 // ----------------------------------------------------------------------
 window-rule {
     geometry-corner-radius 16
