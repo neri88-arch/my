@@ -19,7 +19,7 @@ sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podma
 
 git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si --noconfirm && cd .. && rm -rf paru
 
-paru -S --needed --noconfirm obfs4proxy zen-browser zsh-theme-powerlevel10k-git sddm-conf noctalia-shell oh-my-pi-bin sddm-theme-tokyo-night-git
+paru -S --needed --noconfirm obfs4proxy zen-browser zsh-theme-powerlevel10k-git sddm-conf oh-my-pi-bin sddm-theme-tokyo-night-git
 
 sudo pacman -Rsn vim vim-runtime alacritty waybar htop 
 
@@ -55,6 +55,9 @@ sudo systemctl enable --now tor libvirtd iptables
 sudo chattr +i /etc/resolv.conf
 
 mkdir models
+
+git clone https://github.com/snowarch/inir.git &&
+cd inir && ./setup install -y
 
 git clone https://github.com/ggerganov/llama.cpp
 cd llama.cpp && cmake -B build -DGGML_CUDA=ON && cmake --build build --config Release -j$(nproc)
