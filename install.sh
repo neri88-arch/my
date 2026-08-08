@@ -24,7 +24,7 @@ paru -S --needed --noconfirm obfs4-git zen-browser-bin zsh-theme-powerlevel10k-g
 
 sudo pacman -Rsn --noconfirm vim vim-runtime alacritty waybar htop
 
-CHSH=no RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 cd ~/.oh-my-zsh/custom/plugins/
 git clone https://github.com/zsh-users/zsh-autosuggestions
