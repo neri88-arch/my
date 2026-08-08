@@ -49,7 +49,7 @@ printf 'net.ipv6.conf.all.disable_ipv6 = 1\nnet.ipv6.conf.default.disable_ipv6 =
 
 mkdir -p ~/.config/kitty && echo "background_opacity 0.8" >> ~/.config/kitty/kitty.conf
 
-sudo systemctl enable --now tor libvirtd iptables ufw
+sudo systemctl enable --now tor libvirtd iptables
 
 sudo chattr +i /etc/resolv.conf
 
