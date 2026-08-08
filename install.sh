@@ -15,11 +15,11 @@ set -e
 
 sudo pacman -Syu --noconfirm
 
-sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podman tor zsh ttf-meslo-nerd git cmake fastfetch sl devtools neovim cuda kitty unzip polkit-kde-agent qemu-desktop virt-viewer uv bat eza zoxide gwenview mpv btop
+sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podman tor zsh ttf-meslo-nerd git cmake fastfetch sl devtools neovim cuda kitty unzip polkit-kde-agent qemu-desktop virt-viewer uv bat eza zoxide gwenview mpv btop qutebrowser
 
 git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si --noconfirm && cd .. && rm -rf paru
 
-paru -S --needed --noconfirm obfs4proxy zen-browser zsh-theme-powerlevel10k-git qutebrowser sddm-conf noctalia-shell oh-my-pi-bin sddm-theme-tokyo-night-git
+paru -S --needed --noconfirm obfs4proxy zen-browser zsh-theme-powerlevel10k-git sddm-conf noctalia-shell oh-my-pi-bin sddm-theme-tokyo-night-git
 
 sudo pacman -Rsn vim vim-runtime alacritty waybar htop 
 
