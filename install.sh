@@ -20,7 +20,7 @@ sudo pacman -S --needed --noconfirm kitty unzip polkit-kde-agent qemu-desktop vi
 
 git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si --noconfirm && cd .. && rm -rf paru
 
-paru -S --needed --noconfirm obfs4-git zen-browser-bin zsh-theme-powerlevel10k-git sddm-conf oh-my-pi-bin sddm-theme-tokyo-night-git
+paru -S --needed --noconfirm obfs4proxy-bin zen-browser-bin zsh-theme-powerlevel10k-git sddm-conf oh-my-pi-bin sddm-theme-tokyo-night-git
 
 sudo pacman -Rsn --noconfirm vim vim-runtime alacritty waybar htop
 
