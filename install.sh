@@ -16,7 +16,7 @@ set -e
 sudo pacman -Syu --noconfirm
 
 sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podman tor zsh ttf-meslo-nerd git cmake fastfetch sl devtools neovim cuda 
-sudo pacman -S --needed --noconfirm kitty unzip polkit-kde-agent qemu-desktop virt-viewer uv bat eza gwenview mpv btop qutebrowser dolphin zoxide
+sudo pacman -S --needed --noconfirm kitty unzip polkit-kde-agent qemu-desktop virt-viewer uv bat eza gwenview mpv btop qutebrowser dolphin zoxide zed
 
 git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si --noconfirm && cd .. && rm -rf paru
 
@@ -61,7 +61,6 @@ cd llama.cpp && cmake -B build -DGGML_CUDA=ON && cmake --build build --config Re
 
 cd ~
 
-cp -r "$SCRIPT_DIR/nvim" ~/.config/
 cp -r "$SCRIPT_DIR/wallpaper" ~/Pictures/
 cp "$SCRIPT_DIR/config.kdl" ~/.config/niri/
 
