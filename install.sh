@@ -22,7 +22,7 @@ git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si --noconfi
 
 paru -S --needed --noconfirm obfs4proxy-bin zen-browser-bin zsh-theme-powerlevel10k-git sddm-conf-git oh-my-pi-bin sddm-theme-tokyo-night-git noctalia 
 
-sudo pacman -Rsn --noconfirm vim vim-runtime alacritty waybar htop
+sudo pacman -Rsn --noconfirm vim vim-runtime alacritty waybar htop swaylock swaybg
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
