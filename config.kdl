@@ -131,6 +131,8 @@ binds {
     ISO_Level5_Shift+E { spawn "dolphin"; }
     ISO_Level5_Shift+V { spawn "virt-manager"; }
     ISO_Level5_Shift+W { spawn "qutebrowser" "https://chat.qwen.ai"; }
+    ISO_Level5_Shift+H { spawn "kitty" "-e" "btop"; }
+
 
     Super+Alt+L hotkey-overlay-title="Lock screen: swaylock" { spawn "swaylock"; }
 
