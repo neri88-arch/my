@@ -36,7 +36,7 @@ echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.z
 
 sed -i '/^plugins=/c\plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)' ~/.zshrc
 
-printf "\n# Modern Unix Aliases\nalias ls=\"eza --icons\"\nalias cat=\"bat\"\neval \"\$(zoxide init zsh --cmd cd)\"\nalias pac='sudo pacman -S --needed'\n" >> ~/.zshrc
+printf "\n# Modern Unix Aliases\nalias ls=\"eza --icons\"\nalias cat=\"bat\"\neval \"\nalias pac='sudo pacman -S --needed'\n" >> ~/.zshrc
 
 printf "SocksPort 9050\nVirtualAddrNetworkIPv4 10.192.0.0/10\nAutomapHostsOnResolve 1\nTransPort 9040\nDNSPort 9053\n#UseBridges 1\n#ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy\n#Bridge\n#Bridge\n" | sudo tee -a /etc/tor/torrc >/dev/null
 
