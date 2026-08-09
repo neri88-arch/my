@@ -2,8 +2,7 @@
 // niri config.kdl
 // ============================================================================
 
-// Avvia Quick Shell 
-spawn-at-startup "qs" "-c" "inir"
+// Avvia applicazioni all lancio 
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1" 
 
 // ----------------------------------------------------------------------
