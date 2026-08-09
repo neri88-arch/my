@@ -47,7 +47,8 @@ printf 'nameserver 9.9.9.9\noptions edns0\n' | sudo tee /etc/resolv.conf >/dev/n
 
 printf 'net.ipv6.conf.all.disable_ipv6 = 1\nnet.ipv6.conf.default.disable_ipv6 = 1\nnet.ipv6.conf.lo.disable_ipv6 = 1\n' | sudo tee /etc/sysctl.d/99-disable-ipv6.conf >/dev/null
 
-mkdir -p ~/.config/kitty && echo "background_opacity 0.8" >> ~/.config/kitty/kitty.conf
+mkdir -p ~/.config/kitty
+printf 'background_opacity 0.8\nfont_family      family="MesloLGL Nerd Font"\nbold_font        auto\nitalic_font      auto\nbold_italic_font auto\n' >> ~/.config/kitty/kitty.conf
 
 sudo systemctl enable --now tor libvirtd iptables
 
