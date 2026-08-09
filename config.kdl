@@ -127,7 +127,7 @@ binds {
     // ==== Lancio applicazioni tenendo premuto Caps (ISO_Level5_Shift) ====
     ISO_Level5_Shift+Q { spawn "kitty" "--single-instance"; }
     ISO_Level5_Shift+B { spawn "zen-browser"; }
-    ISO_Level5_Shift+N { spawn "kitty" "-e" "nvim"; }
+    ISO_Level5_Shift+Z { spawn "zed"; }
     ISO_Level5_Shift+E { spawn "dolphin"; }
     ISO_Level5_Shift+V { spawn "virt-manager"; }
     ISO_Level5_Shift+W { spawn "qutebrowser" "https://chat.qwen.ai"; }
