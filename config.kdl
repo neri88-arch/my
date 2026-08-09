@@ -2,7 +2,7 @@
 // niri config.kdl
 // ============================================================================
 
-// Avvia noctalia-shell (bar/dock/launcher su Quickshell).
+// Avvia Quick Shell 
 spawn-at-startup "qs" "-c" "inir"
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1" 
 
