@@ -15,7 +15,7 @@ set -e
 
 sudo pacman -Syu --noconfirm
 
-sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podman tor zsh ttf-meslo-nerd git cmake fastfetch sl devtools neovim cuda 
+sudo pacman -S --needed --noconfirm base-devel distrobox virt-manager qemu podman tor zsh ttf-meslo-nerd git cmake fastfetch sl devtools neovim cuda torsocks
 sudo pacman -S --needed --noconfirm kitty unzip polkit-kde-agent qemu-desktop virt-viewer uv bat eza gwenview mpv btop qutebrowser dolphin zoxide zed
 
 git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si --noconfirm && cd .. && rm -rf paru
@@ -37,8 +37,6 @@ echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >> ~/.z
 sed -i '/^plugins=/c\plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)' ~/.zshrc
 
 printf "\n# Modern Unix Aliases\nalias ls=\"eza --icons\"\nalias cat=\"bat\"\nalias pac='sudo pacman -S --needed'\n\n# Zoxide\neval \"\$(zoxide init zsh --cmd cd)\"\n" >> ~/.zshrc
-
-printf "SocksPort 9050\nVirtualAddrNetworkIPv4 10.192.0.0/10\nAutomapHostsOnResolve 1\nTransPort 9040\nDNSPort 9053\n#UseBridges 1\n#ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy\n#Bridge\n#Bridge\n" | sudo tee -a /etc/tor/torrc >/dev/null
 
 sudo mkdir -p /etc/NetworkManager/conf.d
 printf '[main]\ndns=none\n' | sudo tee /etc/NetworkManager/conf.d/dns.conf >/dev/null
