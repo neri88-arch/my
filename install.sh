@@ -69,7 +69,7 @@ cp "$SCRIPT_DIR/config.kdl" ~/.config/niri/
 
 sudo ufw default deny incoming
 sudo ufw default allow outgoing 
-sudo ufw eneble
+sudo ufw enable
 
 sudo chsh -s "$(which zsh)" "$USER"
 
