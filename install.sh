@@ -54,7 +54,7 @@ sudo systemctl enable --now tor libvirtd iptables
 
 sudo chattr +i /etc/resolv.conf
 
-mkdir Models && mkdir Project
+mkdir Models && mkdir Projects
 
 git clone https://github.com/ggerganov/llama.cpp
 cd llama.cpp && cmake -B build -DGGML_CUDA=ON && cmake --build build --config Release -j$(nproc)
