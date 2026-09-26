@@ -2,7 +2,7 @@
 
 Minimal Arch Linux setup built around **niri** (a scrolling-tiling window manager for Wayland), aimed at being lightweight, fast, and keyboard-driven.
 
-![Lock screen](./screenshots/lockscreen.png)
+![Lock screen](./lockscreen.png)
 
 ## Key features
 
