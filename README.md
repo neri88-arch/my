@@ -76,10 +76,3 @@ A few things aren't applied automatically and need to be fixed by hand after the
 
 - **SDDM theme**: the script installs the `sddm-sugar-candy-git` theme but doesn't set it as the active one. It has to be selected manually by opening the graphical SDDM configuration tool installed via `paru` (check the installed packages for the exact tool name — something like `sddm-config-editor`/`sddm-conf`) and choosing `sugar-candy` as the greeter.
 - **Login/lock screen wallpaper**: it isn't confirmed whether the `Wallpaper.jpg` file included in this repo gets copied automatically into the folder used by the greeter theme. Check after installation and, if needed, copy it manually and select it from the theme's settings.
-
-## Notes
-
-- Niri doesn't support `Hyper` as a modifier name in binds, which is why CapsLock is remapped to `ISO_Level5_Shift` via an XKB option (`lv5:caps_switch`) instead of a true Hyper layer.
-- Keyboard layout: if it isn't "it" by default, uncomment `layout "it"` in `config.kdl`.
-- The script removes `swaylock` from niri's default packages, but the `Super+Alt+L` bind in `config.kdl` still calls it — make sure `swaylock` stays installed (or update the bind) if you want keyboard screen locking to work.
-- The script disables IPv6 and pins DNS to Quad9 with an immutable `resolv.conf`: to change it later you first need to remove the immutable attribute (`sudo chattr -i /etc/resolv.conf`).
