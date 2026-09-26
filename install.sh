@@ -57,6 +57,13 @@ cd llama.cpp && cmake -B build -DGGML_CUDA=ON && cmake --build build --config Re
 
 cd ~
 
+echo "blacklist dmi-sysfs" | sudo tee /etc/modprobe.d/blacklist-dmi.conf >/dev/null
+echo "install dmi-sysfs /bin/false" | sudo tee -a /etc/modprobe.d/blacklist-dmi.conf >/dev/null
+
+echo 'SUBSYSTEM=="dmi", ACTION=="add", RUN+="/bin/chmod 600 /sys/devices/virtual/dmi/id/product_uuid /sys/devices/virtual/dmi/id/board_serial /sys/devices/virtual/dmi/id/chassis_serial /sys/devices/virtual/dmi/id/product_serial"' | sudo tee /etc/udev/rules.d/99-dmi-perms.rules >/dev/null
+
+echo "blacklist tpm_tis" | sudo tee /etc/modprobe.d/blacklist-tpm.conf >/dev/null
+
 cp "$SCRIPT_DIR/config.kdl" ~/.config/niri/
 
 sudo ufw default deny incoming
